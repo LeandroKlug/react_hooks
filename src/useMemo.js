@@ -28,9 +28,11 @@ function App() {
 
   // //componentDidMount
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((response) => setPosts(response));
+    setTimeout(() => {
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => response.json())
+        .then((response) => setPosts(response));
+    }, 5000);
   }, []);
 
   return (
